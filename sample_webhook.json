@@ -1,0 +1,20 @@
+{
+  "title": "High Error Rate Detected",
+  "text": "Error rate for api-service exceeded 5% threshold. Current error rate: 15.5%",
+  "alert_status": "triggered",
+  "tags": [
+    "service:api-service",
+    "env:production",
+    "team:backend",
+    "severity:high"
+  ],
+  "alert_type": "error_tracking",
+  "date": "2024-01-15T12:00:00Z",
+  "org": {
+    "id": "12345",
+    "name": "Demo Org"
+  },
+  "id": "test-alert-123"
+}
+
+

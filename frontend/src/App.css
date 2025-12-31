@@ -1,0 +1,406 @@
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.header {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 2.5rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.header-icon {
+  width: 40px;
+  height: 40px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.header-title h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: -0.025em;
+}
+
+.header-subtitle {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15), 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.2), 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.test-alert-card h2 {
+  margin-bottom: 2rem;
+  color: #1f2937;
+  font-size: 1.75rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.test-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #374151;
+  font-size: 1rem;
+  letter-spacing: 0.025em;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  background: rgba(255, 255, 255, 1);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  color: white;
+  border: none;
+  padding: 1.25rem 2.5rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 1rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(102, 126, 234, 0.3);
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn-primary:hover:not(:disabled)::before {
+  left: 100%;
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.4);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.incident-analysis {
+  animation: slideIn 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  border-left: 4px solid #667eea;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.incident-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #f3f4f6;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: -1.5rem -1.5rem 2rem -1.5rem;
+}
+
+.incident-header h2 {
+  color: #1f2937;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.incident-id {
+  color: #6b7280;
+  font-size: 0.95rem;
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+}
+
+.incident-badges {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  padding: 0.75rem 1.25rem;
+  border-radius: 20px;
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.badge:hover {
+  transform: scale(1.05);
+}
+
+.analysis-section {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.analysis-section:hover {
+  background: rgba(255, 255, 255, 0.8);
+  transform: translateX(4px);
+}
+
+.analysis-section h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #1f2937;
+  font-size: 1.4rem;
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+}
+
+.section-icon {
+  width: 24px;
+  height: 24px;
+  color: #667eea;
+}
+
+.analysis-section p {
+  color: #4b5563;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.actions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.actions-list li {
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.75rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-left: 4px solid #667eea;
+  border-radius: 8px;
+  color: #374151;
+  line-height: 1.6;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.actions-list li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+  transition: left 0.5s;
+}
+
+.actions-list li:hover::before {
+  left: 100%;
+}
+
+.actions-list li:hover {
+  transform: translateX(8px);
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border-left-color: #3b82f6;
+}
+
+.incident-footer {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 2px solid #f3f4f6;
+  color: #6b7280;
+  font-size: 0.95rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.02);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 2rem -1.5rem -1.5rem -1.5rem;
+}
+
+.placeholder-card {
+  text-align: center;
+  padding: 5rem 3rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+  border: 2px dashed rgba(156, 163, 175, 0.3);
+  transition: all 0.3s ease;
+}
+
+.placeholder-card:hover {
+  border-color: rgba(102, 126, 234, 0.5);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.8));
+}
+
+.placeholder-icon {
+  width: 80px;
+  height: 80px;
+  color: #d1d5db;
+  margin: 0 auto 2rem;
+  transition: all 0.3s ease;
+}
+
+.placeholder-card:hover .placeholder-icon {
+  color: #667eea;
+  transform: scale(1.1);
+}
+
+.placeholder-card h2 {
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.placeholder-card p {
+  color: #6b7280;
+  font-size: 1.1rem;
+  max-width: 400px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 2rem 1.5rem;
+  }
+
+  .header-title h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 1.5rem;
+  }
+
+  .card {
+    padding: 2rem;
+  }
+
+  .incident-header {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: -1rem -1rem 2rem -1rem;
+    padding: 1rem;
+  }
+
+  .analysis-section {
+    padding: 1rem;
+  }
+
+  .actions-list li:hover {
+    transform: translateX(4px);
+  }
+
+  .incident-footer {
+    margin: 2rem -1rem -1rem -1rem;
+    padding: 1rem;
+  }
+}
+
+
